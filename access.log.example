@@ -1,0 +1,17 @@
+{
+	"level": "info",
+	"ts": 1679101711.8054824,
+	"logger": "http.log.access.log0",
+	"msg": "handled request",
+	"request": {
+		"remote_ip": "49135b29",
+		"proto": "HTTP/2.0",
+		"method": "GET",
+		"host": "deflect-from.rhahi.com",
+		"uri": "/",
+	},
+	"user_id": "",
+	"duration": 0.000085739,
+	"size": 0,
+	"status": 302
+}

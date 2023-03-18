@@ -1,0 +1,20 @@
+deflect-from.example.com {
+	log {
+		# change this line
+		output file /home/user/log/qrscan.log {
+			roll_size 2MiB
+		}
+		format filter {
+			wrap json
+			fields {
+				# uncomment if you do not want to collect ip
+				# request>remote_ip hash
+				request>remote_port delete
+				request>headers delete
+				request>tls delete
+				resp_headers delete
+			}
+		}
+	}
+	redir deflect-to.example.com
+}
