@@ -1,7 +1,7 @@
 deflect-from.example.com {
 	log {
 		# change this line
-		output file /home/user/log/qrscan.log {
+		output file /home/user/deflect/access.log {
 			roll_size 2MiB
 		}
 		format filter {
