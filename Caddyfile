@@ -1,3 +1,13 @@
+# note that if your runner does not have rights to use low port (80/443),
+# you will have to assign high number port and match 80->8080 to use this
+
+# use the global config below to configure high number port on http[s].
+# {
+# 	http_port 8080
+# 	https_port 8443
+# }
+#
+
 deflect-from.example.com {
 	log {
 		# change this line
