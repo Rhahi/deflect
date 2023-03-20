@@ -9,7 +9,7 @@ Caddy based visitor counter
 ## Running
 
 1. prepare working directory for the script
-1. configure caddyfile log path/filters and caddy start --/path/to/caddyfile
+1. configure caddyfile log path/filters and caddy start --config /path/to/caddyfile
 1. configure caddyfile deflect from and deflect to addresses
 1. install deflect by using `pip install .`
 1. launch `python3 -m deflect` while in the directory where visitorfile.html and access.log will be present. Otherwise, provide them via args.
