@@ -18,6 +18,9 @@ def main(config: dict):
         for line in logfile.follow(config["logfile"]):
             logging.debug("Processig new entry")
             visitor = logfile.get_visitor_id_from_log_line(line)
+            if visitor == "skip":
+                logging.debug("Skipping unintestesting requests")
+                continue
             if visitor == "unknown":
                 logging.warning("Ignored an unparsable line: %s", line)
                 continue

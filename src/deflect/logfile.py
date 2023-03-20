@@ -47,7 +47,11 @@ def follow(file, skip_existing_data=False, sleep_sec=0.5):
         continue
 
 def get_visitor_id_from_log_line(line: str):
-    entry = json.loads(line.strip())
+    entry: dict = json.loads(line.strip())
+    if entry.get('level') == 'error':
+        return 'skip'
     if 'request' in entry:
-        return entry['request']['remote_ip']
+        if entry['request']['uri'] == "/":
+            return entry['request']['remote_ip']
+        return 'skip'
     return 'unknown'
