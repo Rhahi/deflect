@@ -16,5 +16,17 @@ deflect-from.example.com {
 			}
 		}
 	}
-	redir deflect-to.example.com
+	route / {
+		redir https://deflect-to.example.com
+	}
+	# remove this block if you do not want to reveal visitor statistics
+	route /stat {
+		rewrite /stat /visitorfile.html
+		file_server {
+			# change this line
+			root /home/user/deflect
+		}
+	}
+	# all unmatching requests will yield this response
+	respond "Not found" 404
 }
