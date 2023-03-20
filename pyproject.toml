@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deflect"
+version = "0.1.0"
+description = "Redirect a request and log it"
+authors = [
+    {name = "Rhahi", email = "git@rhahi.com"},
+]
+classifiers = [
+    "Programming Language :: Python",
+]
+dependencies = ["pygtail"]
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.urls]
+repository = "https://github.com/Rhahi/deflect.git"
+
